@@ -57,4 +57,22 @@ public class BigNumber {
             System.out.print(d[i]);
         }
     }
+	
+	// method for add
+    public static int[] add(int[] a, int[] b) { 
+        int carry = 0;
+        int[] c = new int[a.length];
+
+        for(int i = a.length - 1; i >= 0; i--) { 
+            c[i] = a[i] + b[i] + carry; 
+            if(c[i] < 10000) 
+                carry = 0; 
+            else {
+                c[i] = c[i] - 10000; 
+                carry = 1; 
+            } 
+        }
+        return c;
+    } 
+
 }
