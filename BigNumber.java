@@ -9,7 +9,7 @@ public class BigNumber {
 		Scanner input = new Scanner(System.in);
 		
 		// information for input number a
-		System.out.println("½Ğ¿é¤J¼Æ¦r a (¤@¦¸¿é¤J³Ì¦h4¦ì¼Æ¡A³Ì¦h¿é¤J20¦ì¼Æ)");
+		System.out.println("è«‹è¼¸å…¥æ•¸å­— a (ä¸€æ¬¡è¼¸å…¥æœ€å¤š4ä½æ•¸ï¼Œæœ€å¤šè¼¸å…¥20ä½æ•¸)");
 		
 		// input number a
 		int a[] = new int[5];
@@ -25,7 +25,7 @@ public class BigNumber {
 		System.out.println();
 		
 		// information for input number b
-		System.out.println("½Ğ¿é¤J¼Æ¦r b (¤@¦¸¿é¤J³Ì¦h4¦ì¼Æ¡A³Ì¦h¿é¤J20¦ì¼Æ¡A¥B b > a)");
+		System.out.println("è«‹è¼¸å…¥æ•¸å­— b (ä¸€æ¬¡è¼¸å…¥æœ€å¤š4ä½æ•¸ï¼Œæœ€å¤šè¼¸å…¥20ä½æ•¸ï¼Œä¸” b > a)");
 		
 		// input number b
 		int b[] = new int[5];
@@ -42,53 +42,53 @@ public class BigNumber {
 		
 		
 		// add numbers and print answer
-        int[] c = BigNumber.add(a, b);
+        	int[] c = BigNumber.add(a, b);
 		System.out.print("a + b = ");
-        for(int i = 0; i < c.length; i++) {
-            System.out.print(c[i]);
-        }
-        System.out.println();
+		for(int i = 0; i < c.length; i++) {
+        		System.out.print(c[i]);
+        	}
+        	System.out.println();
 		
 		
 		// sub numbers and print answer
 		int[] d = BigNumber.sub(a, b);
 		System.out.print("a - b = ");
 		for(int i = 0; i < d.length; i++) {
-            System.out.print(d[i]);
-        }
-    }
+            		System.out.print(d[i]);
+        	}
+    	}
 	
 	// method for add
-    public static int[] add(int[] a, int[] b) { 
-        int carry = 0;
-        int[] c = new int[a.length];
+    	public static int[] add(int[] a, int[] b) { 
+        	int carry = 0;
+        	int[] c = new int[a.length];
 
-        for(int i = a.length - 1; i >= 0; i--) { 
-            c[i] = a[i] + b[i] + carry; 
-            if(c[i] < 10000) 
-                carry = 0; 
-            else {
-                c[i] = c[i] - 10000; 
-                carry = 1; 
-            } 
-        }
-        return c;
-    } 
+        	for(int i = a.length - 1; i >= 0; i--) { 
+        		c[i] = a[i] + b[i] + carry; 
+            		if(c[i] < 10000) 
+                		carry = 0; 
+            		else {
+                		c[i] = c[i] - 10000; 
+                		carry = 1; 
+            		} 
+        	}
+        	return c;
+	} 
 
 	// method for sub
-    public static int[] sub(int[] a, int[] b) { 
-        int borrow = 0; 
-        int[] c = new int[a.length];
+    	public static int[] sub(int[] a, int[] b) { 
+        	int borrow = 0; 
+        	int[] c = new int[a.length];
         
-        for(int i = a.length - 1; i >= 0; i--) { 
-            c[i] = a[i] - b[i] - borrow; 
-            if(c[i] >= 0) 
-                borrow = 0; 
-            else { 
-                c[i] = c[i] + 10000; 
-                borrow = 1; 
-            } 
-        }
-        return c;
-    } 
+        	for(int i = a.length - 1; i >= 0; i--) { 
+            		c[i] = a[i] - b[i] - borrow; 
+            		if(c[i] >= 0) 
+                		borrow = 0; 
+            		else { 
+                		c[i] = c[i] + 10000; 
+                		borrow = 1; 
+            		} 
+		}
+        	return c;
+    	} 
 }
