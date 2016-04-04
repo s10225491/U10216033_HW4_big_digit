@@ -75,4 +75,20 @@ public class BigNumber {
         return c;
     } 
 
+	// method for sub
+    public static int[] sub(int[] a, int[] b) { 
+        int borrow = 0; 
+        int[] c = new int[a.length];
+        
+        for(int i = a.length - 1; i >= 0; i--) { 
+            c[i] = a[i] - b[i] - borrow; 
+            if(c[i] >= 0) 
+                borrow = 0; 
+            else { 
+                c[i] = c[i] + 10000; 
+                borrow = 1; 
+            } 
+        }
+        return c;
+    } 
 }
