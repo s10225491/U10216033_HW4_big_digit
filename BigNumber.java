@@ -25,7 +25,7 @@ public class BigNumber {
 		System.out.println();
 		
 		// information for input number b
-		System.out.println("請輸入數字 b (一次輸入最多4位數，最多輸入20位數，且 b > a)");
+		System.out.println("請輸入數字 b (一次輸入最多4位數，最多輸入20位數，且 b < a)");
 		
 		// input number b
 		int b[] = new int[5];
